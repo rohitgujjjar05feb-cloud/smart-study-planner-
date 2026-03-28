@@ -17,12 +17,15 @@ A modern web-based study planner to manage daily tasks efficiently.
 - JavaScript
 
 ## Live Demo
-https://rohitgujjar05feb-cloud.github.io/smart-study-planner-/
+https://rohitgujjjar05feb-cloud.github.io/smart-study-planner-/
 
 ## screenshot 
-<img width="1847" height="1011" alt="image" src="https://github.com/user-attachments/assets/534964c9-6901-4826-a7aa-a5578cedb423" />
-<img width="877" height="947" alt="image" src="https://github.com/user-attachments/assets/47379d10-fc69-428c-bf25-f4ce1125a6d2" />
 
+# dashboard 
+<img width="1847" height="1011" alt="image" src="https://github.com/user-attachments/assets/534964c9-6901-4826-a7aa-a5578cedb423" />
+
+# add task 
+<img width="877" height="947" alt="image" src="https://github.com/user-attachments/assets/47379d10-fc69-428c-bf25-f4ce1125a6d2" />
 
  Future Improvements
 - Search functionality
