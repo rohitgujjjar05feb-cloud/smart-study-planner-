@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Study Planner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard">
+
+    <header class="topbar">
+      <div class="brand">
+        <div class="logo-box">📘</div>
+        <div>
+          <h1>Smart Study Planner ✨</h1>
+          <p id="todayDate"></p>
+        </div>
+      </div>
+      <button class="add-task-top" id="openModalBtn">+ Add Task</button>
+    </header>
+
+    <section class="stats-grid">
+      <div class="stat-card blue">
+        <div class="stat-left">
+          <p>Total Tasks</p>
+          <div class="stat-number-row">
+            <h2 id="totalTasks">0</h2>
+            <span class="stat-change blue-text">+12%</span>
+          </div>
+        </div>
+        <div class="stat-icon blue-icon">◎</div>
+      </div>
+
+      <div class="stat-card green">
+        <div class="stat-left">
+          <p>Completed</p>
+          <div class="stat-number-row">
+            <h2 id="completedTasks">0</h2>
+            <span class="stat-change green-text">20%</span>
+          </div>
+        </div>
+        <div class="stat-icon green-icon">✓</div>
+      </div>
+
+      <div class="stat-card orange">
+        <div class="stat-left">
+          <p>Pending</p>
+          <div class="stat-number-row">
+            <h2 id="pendingTasks">0</h2>
+          </div>
+        </div>
+        <div class="stat-icon orange-icon">◔</div>
+      </div>
+
+      <div class="stat-card pink">
+        <div class="stat-left">
+          <p>High Priority</p>
+          <div class="stat-number-row">
+            <h2 id="highPriorityTasks">0</h2>
+          </div>
+        </div>
+        <div class="stat-icon pink-icon">!</div>
+      </div>
+    </section>
+
+    <section class="filter-box">
+
+  <div class="filter-container">
+    
+    <!-- LEFT SIDE -->
+    <div class="filter-left">
+      <h3>Filter by Status</h3>
+      <select id="statusFilter">
+        <option value="all">All</option>
+        <option value="completed">Completed</option>
+        <option value="pending">Pending</option>
+      </select>
+    </div>
+
+    <!-- RIGHT SIDE -->
+    <div class="filter-right">
+      <div class="circular-progress" id="progressCircle">
+        <div class="progress-inner">
+          <span id="progressText">0%</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+    <section class="tasks-section">
+      <div id="taskList"></div>
+    </section>
+
+  </div>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="taskModal">
+    <div class="task-modal">
+      <button class="close-modal" id="closeModalBtn">&times;</button>
+
+      <h2>Add New Task</h2>
+      <p class="modal-subtitle">
+        Fill in the details below to add a new task to your study planner.
+      </p>
+
+      <div class="modal-form">
+        <label for="taskTitle">Task Title *</label>
+        <input type="text" id="taskTitle" placeholder="e.g., Complete Calculus Assignment" />
+
+        <label for="subject">Subject *</label>
+        <input type="text" id="subject" placeholder="Select a subject" />
+
+        <label for="priority">Priority *</label>
+        <select id="priority">
+          <option value="">Select Priority</option>
+          <option value="High">High Priority</option>
+          <option value="Medium">Medium Priority</option>
+          <option value="Low">Low Priority</option>
+        </select>
+
+        <label for="dueDate">Due Date *</label>
+        <input type="date" id="dueDate" />
+
+        <label for="description">Description (Optional)</label>
+        <textarea id="description" placeholder="Add more details about this task..."></textarea>
+
+        <div class="modal-buttons">
+          <button type="button" class="cancel-btn" id="cancelModalBtn">Cancel</button>
+          <button type="button" class="submit-btn" id="addTaskBtn">Add Task</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
